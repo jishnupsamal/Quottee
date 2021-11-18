@@ -1,10 +1,14 @@
 const quoteEl = document.querySelector('#quote')
+const authorEl = document.querySelector('.author')
+const card = document.querySelector('#card')
 const url = `https://api.quotable.io/random`
 
 fetch(url, {
     'method': "GET",
+    'mode': 'cors',
     'headers': {
         'content-type': 'application/json',
+        'charset': 'UTF-8',
     },
 })
   .then(
@@ -17,7 +21,8 @@ fetch(url, {
         console.log(data)
         let content = data.content
         let author = data.author
-        quoteEl.innerHTML = `<h2>${content} - ${author}</h2>`
+        quoteEl.innerHTML = `${content}`
+        authorEl.innerHTML = `${author}`
       })
     }
   )
@@ -26,4 +31,4 @@ fetch(url, {
     console.log('Fetch Error :-S', err)
   });
 
-
+card.classList.remove('invisible')

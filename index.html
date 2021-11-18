@@ -4,13 +4,33 @@
         <meta charset="utf-8">
         <meta name='viewport' content="width=device-width, initial-scale=1.0">
         <!--Stylesheets-->
-        <link rel='stylesheet' href='./bootstrap/dist/css/bootstrap-grid.min.css'>
+        <link rel='stylesheet' href='./bootstrap/dist/css/bootstrap.min.css'>
         <link rel='stylesheet' href='./style.css'>
-        <title>Quottee | Your Personal Motivator</title>
+        <link rel='icon' type="image/svg+xml" sizes="512x512" href='./favicon.svg'>
+        <title>Quottee</title>
     </head>
     <body>
-        <h1>Quottee</h1>
-        <p id='quote'></p>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark me-0">
+            <div class="container-fluid">
+                <a class="navbar-brand fs-2" href="/">
+                    <img width='50' height='50' src="./favicon.svg">
+                    Quottee
+                </a>
+            </div>
+        </nav>
+        
+        <div class='container-fluid'>
+            <div class='card invisible shadow-lg my-2' id='card'>
+                <div class='card-header fs-3'>Quote</div>
+                <div class='card-body text-center'>
+                    <blockquote class='blockquote mb-0'>
+                        <p id='quote'></p>
+                        <footer class="blockquote-footer author"></footer>
+                    </blockquote>
+                </div>
+                </div>
+            </div>
+        </div>
         <!--Javascripts-->
         <script src='./bootstrap/dist/js/bootstrap.bundle.min.js'></script>
         <script src='./script.js'></script>
